@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milind Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #333;
+    }
+
+    .list {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .list li a {
+      text-decoration: none;
+      font-size: 24px;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .list li a:hover {
+      color: #007bff;
+    }
+
+    .social a {
+      font-size: 40px;
+      color: #333;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .list {
+        margin-left: 0;
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .social a {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Milind Varangaonkar</h1>
+
+    <ul class="list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./painting.html">Available Paintings</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <div class="social">
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-facebook-square'></i></a>
+      <a href="#"><i class='bx bxl-gmail'></i></a>
+    </div>
+  </div>
+</body>
+</html>

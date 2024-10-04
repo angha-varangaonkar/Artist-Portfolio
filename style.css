@@ -1,0 +1,97 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #001f3f;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #001f3f;
+    font-weight: bold;
+  }
+  
+  nav ul li a.cart {
+    font-size: 24px;
+  }
+  
+  /* Hero section */
+  .hero {
+    background: url('path-to-your-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    color: white;
+    z-index: 2;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-buttons .btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Footer styling */
+  footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  footer p {
+    margin-top: 10px;
+  }
+  

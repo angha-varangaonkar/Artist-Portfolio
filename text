@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milind Varangaonkar - Art Gallery</title>
+  
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* General styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Header styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 2px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 45px; /* Increased logo size */
+      font-weight: bold;
+      color: #001f3f;
+      flex: 1; /* Allow the logo to take up space */
+    }
+
+    /* Navigation styling */
+    nav {
+      flex: 8; /* Allow nav to take up more space */
+      display: flex;
+      justify-content: center; /* Center the nav items */
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin-left: 20px; /* Added margin to move the nav items slightly to the right */ 
+    }
+
+    nav ul li {
+      margin: 0 20px; /* Spacing between nav items */
+      position: relative;
+    }
+
+    nav ul li::after {
+      content: "";
+      margin-left: 3px;
+      margin-right: 3px;
+      color: #001f3f;
+    }
+
+    nav ul li:last-child::after {
+      content: "";
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #001f3f;
+      font-weight: bold;
+      font-size: 22px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      border-bottom: 2px solid #001f3f;
+    }
+
+    /* Social media links */
+    .social {
+      display: flex;
+      align-items: center;
+      flex: 1; /* Allow social to take up space */
+      justify-content: flex-end; /* Align social icons to the right */
+    }
+
+    .social a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #001f3f;
+      font-size: 22px;
+    }
+
+    .social a i {
+      font-size: 30px; /* Increased icon size */
+    }
+
+    .social a:hover {
+      color: #888;
+    }
+
+    /* Hero Section Styling */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x600');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #001f3f;
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-weight: bold;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-buttons a:hover {
+      background-color: #003366;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #001f3f;
+      color: white;
+      font-size: 16px;
+      position: relative;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: flex-start; /* Align items to the left */
+      }
+
+      nav {
+        justify-content: center; /* Center nav items on smaller screens */
+        width: 100%; /* Make nav take full width */
+      }
+
+      nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 15px; /* Add space between logo and nav */
+      }
+
+      nav ul li {
+        margin: 10px 0; /* Add space between nav items */
+      }
+
+      .social {
+        justify-content: center; /* Center social icons on smaller screens */
+        margin-top: 15px; /* Space above social icons */
+        width: 100%; /* Make social take full width */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <header>
+      <div class="logo">Milind Varangaonkar</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Available Paintings</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </header>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Alex Garant: A New Perspective</h1>
+      <div class="hero-buttons">
+        <a href="#" class="btn">Shop Exclusive Merch</a>
+        <a href="#" class="btn">Available Original Paintings</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>FREE SHIPPING ON ALL ORDERS OF $100 OR MORE WITH PROMO CODE SHIP100 AT CHECKOUT</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+<div class="card">
+  <img src="/images/child2.jpg" class="card-img-top" alt="Children painting 1">
+  <div class="card-body">
+    <h5 class="card-title">Children</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Acrylic</li>
+    <li class="list-group-item">Price: $200</li>
+    <li class="list-group-item">Size: 18x24 inches</li>
+  </ul>
+</div>
+
+<div class="card">
+  <img src="/images/child3.jpg" class="card-img-top" alt="Children painting 2">
+  <div class="card-body">
+    <h5 class="card-title">Children</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Oil</li>
+    <li class="list-group-item">Price: $250</li>
+    <li class="list-group-item">Size: 20x30 inches</li>
+  </ul>
+</div>
+
+<div class="card">
+  <img src="/images/child1.jpg" class="card-img-top" alt="Children painting 3">
+  <div class="card-body">
+    <h5 class="card-title">Children</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Watercolor</li>
+    <li class="list-group-item">Price: $180</li>
+    <li class="list-group-item">Size: 16x20 inches</li>
+  </ul>
+</div>
+
+<div class="card">
+  <img src="/images/child4.jpg" class="card-img-top" alt="Children painting 4">
+  <div class="card-body">
+    <h5 class="card-title">Children</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Watercolor</li>
+    <li class="list-group-item">Price: $180</li>
+    <li class="list-group-item">Size: 16x20 inches</li>
+  </ul>
+</div>
+
+<div class="card">
+  <img src="/images/bird1.jpg" class="card-img-top" alt="Children painting 5">
+  <div class="card-body">
+    <h5 class="card-title">Children</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Watercolor</li>
+    <li class="list-group-item">Price: $180</li>
+    <li class="list-group-item">Size: 16x20 inches</li>
+  </ul>
+</div>
+
+<div class="card">
+  <img src="/images/dancer1.jpg" class="card-img-top" alt="Dancer painting">
+  <div class="card-body">
+    <h5 class="card-title">Dancer</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Watercolor</li>
+    <li class="list-group-item">Price: $180</li>
+    <li class="list-group-item">Size: 16x20 inches</li>
+  </ul>
+</div>
