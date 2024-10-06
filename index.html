@@ -6,6 +6,7 @@
   <title>Milind Website</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
   <style>
     * {
       margin: 0;
@@ -59,54 +60,6 @@
       color: #007bff;
     }
 
-    .banner {
-      display: flex;
-      justify-content: center;
-      padding: 40px 0;
-    }
-
-    .banner img {
-      max-width: 100%;
-      width: 80%; /* Controls width of the banner, adjust as needed */
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .paintings {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 20px;
-    }
-
-    .card {
-      width: 18rem;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card-img-top {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .card-body {
-      text-align: center;
-    }
-
-    .card-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
     @media (max-width: 768px) {
       .list {
         margin-left: 0;
@@ -120,12 +73,9 @@
       .social a {
         font-size: 30px;
       }
-
-      .banner img {
-        width: 100%; /* Full width for mobile */
-      }
     }
   </style>
+  
 </head>
 <body>
   <div class="navbar">
@@ -145,91 +95,199 @@
     </div>
   </div>
 
-  <div class="banner">
-    <img src="/images/MILIND VARANGAONKAR.png" alt="Milind Varangaonkar Banner">
+  <div class="banner" style="display: flex; justify-content: center; padding: 40px 0;">
+    <img src="/images/MILIND VARANGAONKAR.png" alt="Milind Varangaonkar Banner" style="max-width: 100%; width: 80%; height: auto; display: block; margin: 0 auto;">
   </div>
    
-  <h1 style="display: flex; justify-content: center;">Paintings</h1>
-<div class="paintings">
-   
-<div class="card">
-  <img src="/images/child2.jpg" class="card-img-top" alt="Children painting 1">
-  <div class="card-body">
-    <h5 class="card-title">Children</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Medium: Acrylic</li>
-    <li class="list-group-item">Price: $200</li>
-    <li class="list-group-item">Size: 18x24 inches</li>
-  </ul>
+  <h1 style="display: flex; justify-content: center; align-items: center; position: relative; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <span style="width: 300px; border-bottom: 1px solid #333; margin-right: 10px;"></span>
+    Paintings
+    <span style="width: 300px; border-bottom: 1px solid #333; margin-left: 10px;"></span>
+  </h1>
+  
+  <div class="paintings" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px;">
+    <!-- Card 1 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child2.jpg" class="card-img-top" alt="Children painting 1" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Acrylic</li>
+            <li class="list-group-item">Price: $200</li>
+            <li class="list-group-item">Size: 18x24 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child3.jpg" class="card-img-top" alt="Children painting 2" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Oil</li>
+            <li class="list-group-item">Price: $250</li>
+            <li class="list-group-item">Size: 20x30 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child1.jpg" class="card-img-top" alt="Children painting 3" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Watercolor</li>
+            <li class="list-group-item">Price: $180</li>
+            <li class="list-group-item">Size: 16x20 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child4.jpg" class="card-img-top" alt="Children painting 4" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Watercolor</li>
+            <li class="list-group-item">Price: $180</li>
+            <li class="list-group-item">Size: 16x20 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child6.jpg" class="card-img-top" alt="Children painting 6" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Watercolor</li>
+            <li class="list-group-item">Price: $180</li>
+            <li class="list-group-item">Size: 16x20 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child7.jpg" class="card-img-top" alt="Children painting 7" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Watercolor</li>
+            <li class="list-group-item">Price: $180</li>
+            <li class="list-group-item">Size: 16x20 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/child8.jpg" class="card-img-top" alt="Children painting 8" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Watercolor</li>
+            <li class="list-group-item">Price: $180</li>
+            <li class="list-group-item">Size: 16x20 inches</li>
+        </ul>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card" style="
+        width: 18rem; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <img src="/images/bird1.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: Watercolor</li>
+            <li class="list-group-item">Price: $180</li>
+            <li class="list-group-item">Size: 16x20 inches</li>
+        </ul>
+    </div>
 </div>
 
-<div class="card">
-  <img src="/images/child3.jpg" class="card-img-top" alt="Children painting 2">
-  <div class="card-body">
-    <h5 class="card-title">Children</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Medium: Oil</li>
-    <li class="list-group-item">Price: $250</li>
-    <li class="list-group-item">Size: 20x30 inches</li>
-  </ul>
-</div>
 
-<div class="card">
-  <img src="/images/child1.jpg" class="card-img-top" alt="Children painting 3">
-  <div class="card-body">
-    <h5 class="card-title">Children</h5>
+  <div class="more" style="display: flex; justify-content: center; margin: 20px;">
+    <a href="/painting.html" style="text-decoration: none;">
+      <button style="
+        background-color: #808080; /* Gray background */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 15px 30px; /* Some padding */
+        text-align: center; /* Center the text */
+        font-size: 16px; /* Increase font size */
+        border-radius: 8px; /* Rounded corners */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        cursor: pointer; /* Pointer/hand icon */
+      "
+      onmouseover="this.style.backgroundColor='#6e6e6e'; this.style.transform='scale(1.05)';"
+      onmouseout="this.style.backgroundColor='#808080'; this.style.transform='scale(1)';">
+        View More
+      </button>
+    </a>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Medium: Watercolor</li>
-    <li class="list-group-item">Price: $180</li>
-    <li class="list-group-item">Size: 16x20 inches</li>
-  </ul>
-</div>
-
-<div class="card">
-  <img src="/images/child4.jpg" class="card-img-top" alt="Children painting 4">
-  <div class="card-body">
-    <h5 class="card-title">Children</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Medium: Watercolor</li>
-    <li class="list-group-item">Price: $180</li>
-    <li class="list-group-item">Size: 16x20 inches</li>
-  </ul>
-</div>
-
-<div class="card">
-  <img src="/images/bird1.jpg" class="card-img-top" alt="Children painting 5">
-  <div class="card-body">
-    <h5 class="card-title">Children</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Medium: Watercolor</li>
-    <li class="list-group-item">Price: $180</li>
-    <li class="list-group-item">Size: 16x20 inches</li>
-  </ul>
-</div>
-
-<div class="card">
-  <img src="/images/dancer1.jpg" class="card-img-top" alt="Dancer painting">
-  <div class="card-body">
-    <h5 class="card-title">Dancer</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Medium: Watercolor</li>
-    <li class="list-group-item">Price: $180</li>
-    <li class="list-group-item">Size: 16x20 inches</li>
-  </ul>
-  </div>
-  </div>
+  
+  
+  
 
   <div class="footer" style="background-color: #333; padding: 30px 0; color: #f1f1f1; box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); position: relative; bottom: 0; width: 100%;">
     <footer class="footer">
       <div class="container text-center">
         
         <ul class="footer-links list-inline" style="margin: 20px 0; padding: 0;">
+          <li class="list-inline-item" style="display: inline;">
+            <a href="./index.html" 
+               style="text-decoration: none; color: #f1f1f1; margin: 0 15px; font-size: 18px; position: relative; transition: color 0.3s, transform 0.3s;"
+               onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
+               onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';">
+              Home
+            </a>
+          </li>
           <li class="list-inline-item" style="display: inline;">
             <a href="./painting.html" 
                style="text-decoration: none; color: #f1f1f1; margin: 0 15px; font-size: 18px; position: relative; transition: color 0.3s, transform 0.3s;"
@@ -257,20 +315,26 @@
         </ul>
         
         <div class="social-icons" style="margin-top: 20px;">
-          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"><i class='bx bxl-instagram'></i></a>
-          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"><i class='bx bxl-facebook-square'></i></a>
-          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"><i class='bx bxl-gmail'></i></a>
+          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
+          onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
+          onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';"><i class='bx bxl-instagram'></i></a>
+          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
+          onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
+          onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';"><i class='bx bxl-facebook-square'></i></a>
+          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
+          onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
+          onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';"><i class='bx bxl-gmail'></i></a>
         </div>
         
-        <p style="margin: 0; font-size: 16px; color: #fff;">&copy; 2024 Milind Varangaonkar. All rights reserved.</p>
+        <p style="margin: 0; font-size: 16px; color: #fff;">&copy; 2024 Milind Varangaonkar. All rights reserved.
+         <br>
+         Designed by Angha Varangaonkar
+        </p>
       </div>
+      
     </footer>
   </div>
-  
-  
 
-
-  </div>
 
   
 </body>
