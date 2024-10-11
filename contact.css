@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .contact-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 40px 0;
+    background-color: white;
+  }
+  
+  .contact-form {
+    width: 40%;
+    min-width: 300px; /* Ensure a minimum width for smaller devices */
+  }
+  
+  .contact-form h3 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+  }
+  
+  .buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .social-media {
+    text-align: center;
+    width: 40%;
+    min-width: 300px; /* Ensure a minimum width for smaller devices */
+  }
+  
+  .social-media h3 {
+    margin-bottom: 20px;
+  }
+  
+  .social-media a img {
+    width: 50px;
+    margin: 0 10px;
+  }
+  
+  .social-media .email {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px;
+  }
+  
+  .social-media .email img {
+    width: 40px;
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .contact-form,
+    .social-media {
+      width: 100%; /* Full width on smaller screens */
+      margin: 0 10px; /* Add some margin for spacing */
+    }
+  
+    .contact-section {
+      padding: 20px 0; /* Adjust padding for smaller screens */
+    }
+  
+    .buttons {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      align-items: center; /* Center buttons */
+    }
+  }
+  

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Milind Website</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./contact.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Move script to head -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
     * {
@@ -116,11 +118,59 @@
     </ul>
 
     <div class="social">
-      <a href="#"><i class='bx bxl-instagram'></i></a>
-      <a href="#"><i class='bx bxl-facebook-square'></i></a>
-      <a href="#"><i class='bx bxl-gmail'></i></a>
+      <a href="https://www.instagram.com/milindvarangaonkar"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.facebook.com/milind.varangaonkar?mibextid=ZbWKwL"><i class='bx bxl-facebook-square'></i></a>
+      <a href="mailto:milindvarangaonkar@gmail.com" title="Email Milind Varangaonkar"><i class='bx bxl-gmail'></i></a>
     </div>
   </div>
+
+  <section class="contact-section">
+    <div class="contact-form">
+      <h3>Want to contact me?</h3>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      
+        <label for="captcha">2+3=?</label>
+        <input type="text" id="captcha" name="captcha" required>
+      
+        <div class="buttons">
+          <button type="submit">SEND MESSAGE</button>
+          <button type="reset">RESET</button>
+        </div>
+        
+        <!-- New note line added below -->
+      
+        <p>Note: Please enter your correct details so that we can contact you.</p>
+      </form>
+    </div>
+
+    <div class="social-media">
+      <h3>Connect me on Social media</h3>
+      <a href="https://www.facebook.com/milind.varangaonkar?mibextid=ZbWKwL"><img src="./images//facebook.png" alt="Facebook Icon"></a>
+      <a href="https://www.instagram.com/milindvarangaonkar"><img src="./images/instagram (1).png" alt="Instagram Icon"></a>
+      <p>If you want to just say hi, you can directly connect with me through social networks.</p>
+      <div class="email">
+        <img src="./images//gmail.png" alt="Gmail Icon">
+        <p styl>milindvarangaonkar@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="./contactScript.js"></script> <!-- Keep the main script at the end of the body for optimal performance -->
+
+
+
+
 
   <div class="footer" style="background-color: #333; padding: 30px 0; color: #f1f1f1; box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); position: relative; bottom: 0; width: 100%;">
     <footer class="footer">
@@ -162,13 +212,13 @@
         </ul>
         
         <div class="social-icons" style="margin-top: 20px;">
-          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
+          <a href="https://www.instagram.com/milindvarangaonkar" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
           onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
           onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';"><i class='bx bxl-instagram'></i></a>
-          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
+          <a href="https://www.facebook.com/milind.varangaonkar?mibextid=ZbWKwL" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
           onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
           onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';"><i class='bx bxl-facebook-square'></i></a>
-          <a href="#" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
+          <a href="mailto:milindvarangaonkar@gmail.com" style="font-size: 30px; color: #f1f1f1; margin: 0 10px; transition: color 0.3s, transform 0.3s;"
           onmouseover="this.style.color='#007bff'; this.style.transform='translateY(-5px)';" 
           onmouseout="this.style.color='#f1f1f1'; this.style.transform='translateY(0)';"><i class='bx bxl-gmail'></i></a>
         </div>
