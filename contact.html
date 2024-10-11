@@ -59,9 +59,9 @@
       color: #007bff;
     }
 
+    /* RESPONSIVENESS */
     @media (max-width: 768px) {
       .list {
-        margin-left: 0;
         font-size: 20px;
       }
 
@@ -71,6 +71,35 @@
 
       .social a {
         font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .social {
+        margin-top: 15px;
+      }
+
+      .social a {
+        font-size: 30px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .footer p {
+        font-size: 12px;
       }
     }
   </style>
@@ -92,7 +121,6 @@
       <a href="#"><i class='bx bxl-gmail'></i></a>
     </div>
   </div>
-
 
   <div class="footer" style="background-color: #333; padding: 30px 0; color: #f1f1f1; box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); position: relative; bottom: 0; width: 100%;">
     <footer class="footer">
@@ -153,6 +181,5 @@
       
     </footer>
   </div>
-
 </body>
 </html>

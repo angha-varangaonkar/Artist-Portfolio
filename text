@@ -317,3 +317,293 @@
   Paintings
   <span style="width: 300px; border-bottom: 1px solid #333; margin-left: 10px;"></span>
 </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="paintings" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px;">
+  <!-- Card 1 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/radha krishna 2.jpg" class="card-img-top" alt="Children painting 1" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">radha krishna</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Acrylic</li>
+          <li class="list-group-item">Price: $200</li>
+          <li class="list-group-item">Size: 18x24 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 1.jpg" class="card-img-top" alt="Children painting 2" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Oil</li>
+          <li class="list-group-item">Price: $250</li>
+          <li class="list-group-item">Size: 20x30 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 2.jpg" class="card-img-top" alt="Children painting 3" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Watercolor</li>
+          <li class="list-group-item">Price: $180</li>
+          <li class="list-group-item">Size: 16x20 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 3.jpg" class="card-img-top" alt="Children painting 4" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Watercolor</li>
+          <li class="list-group-item">Price: $180</li>
+          <li class="list-group-item">Size: 16x20 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 4.jpg" class="card-img-top" alt="Children painting 6" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Watercolor</li>
+          <li class="list-group-item">Price: $180</li>
+          <li class="list-group-item">Size: 16x20 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 5.jpg" class="card-img-top" alt="Children painting 7" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Watercolor</li>
+          <li class="list-group-item">Price: $180</li>
+          <li class="list-group-item">Size: 16x20 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 6.jpg" class="card-img-top" alt="Children painting 8" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Watercolor</li>
+          <li class="list-group-item">Price: $180</li>
+          <li class="list-group-item">Size: 16x20 inches</li>
+      </ul>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="card" style="
+      width: 18rem; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <img src="/images/ghat 7.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+      <div class="card-body" style="text-align: center;">
+          <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Children</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Medium: Watercolor</li>
+          <li class="list-group-item">Price: $180</li>
+          <li class="list-group-item">Size: 16x20 inches</li>
+      </ul>
+  </div>
+
+   <!-- Card 9 -->
+<div class="card" style="
+   width: 18rem; 
+   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+   <img src="/images/tripolia.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+   <div class="card-body" style="text-align: center;">
+       <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Tripolia</h5>
+   </div>
+   <ul class="list-group list-group-flush">
+       <li class="list-group-item">Medium: Watercolor</li>
+       <li class="list-group-item">Price: $180</li>
+       <li class="list-group-item">Size: 16x20 inches</li>
+   </ul>
+</div>
+
+    <!-- Card 10 -->
+<div class="card" style="
+width: 18rem; 
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+<img src="/images/tiger1.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+<div class="card-body" style="text-align: center;">
+    <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Tiger</h5>
+</div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Medium: Watercolor</li>
+    <li class="list-group-item">Price: $180</li>
+    <li class="list-group-item">Size: 16x20 inches</li>
+</ul>
+</div>
+
+<div class="card" style="
+width: 18rem; 
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+<img src="/images/tiger2.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+<div class="card-body" style="text-align: center;">
+  <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Tiger</h5>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Medium: Watercolor</li>
+  <li class="list-group-item">Price: $180</li>
+  <li class="list-group-item">Size: 16x20 inches</li>
+</ul>
+</div>
+
+<div class="card" style="
+width: 18rem; 
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+<img src="/images/tiger3.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+<div class="card-body" style="text-align: center;">
+  <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Tiger</h5>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Medium: Watercolor</li>
+  <li class="list-group-item">Price: $180</li>
+  <li class="list-group-item">Size: 16x20 inches</li>
+</ul>
+</div>
+
+<div class="card" style="
+width: 18rem; 
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+<img src="/images/tiger4.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+<div class="card-body" style="text-align: center;">
+  <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Tiger</h5>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Medium: Watercolor</li>
+  <li class="list-group-item">Price: $180</li>
+  <li class="list-group-item">Size: 16x20 inches</li>
+</ul>
+</div>
+
+
+<div class="card" style="
+width: 18rem; 
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" 
+onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+<img src="/images/tiger5.jpg" class="card-img-top" alt="Children painting 9" style="width: 100%; height: 250px; object-fit: cover;">
+<div class="card-body" style="text-align: center;">
+  <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">Tiger</h5>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Medium: Watercolor</li>
+  <li class="list-group-item">Price: $180</li>
+  <li class="list-group-item">Size: 16x20 inches</li>
+</ul>
+</div>
+
+
+
+</div>
+
+

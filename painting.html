@@ -59,9 +59,9 @@
       color: #007bff;
     }
 
+    /* RESPONSIVENESS */
     @media (max-width: 768px) {
       .list {
-        margin-left: 0;
         font-size: 20px;
       }
 
@@ -73,6 +73,70 @@
         font-size: 30px;
       }
     }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .social {
+        margin-top: 15px;
+      }
+
+      .social a {
+        font-size: 30px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .footer p {
+        font-size: 12px;
+      }
+    }
+
+
+
+    /* new css */
+    .card {
+      width: 18rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .pagination button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .pagination button:disabled {
+      background-color: #dcdcdc;
+      cursor: not-allowed;
+    }
+
   </style>
 </head>
 <body>
@@ -92,6 +156,108 @@
       <a href="#"><i class='bx bxl-gmail'></i></a>
     </div>
   </div>
+
+
+ 
+  <div class="paintings" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px;" id="paintings-container">
+    <!-- Repeat your painting cards here -->
+  </div>
+
+  <!-- Pagination controls -->
+  <div class="pagination">
+    <button id="prev-page" onclick="changePage(-1)" disabled>Previous</button>
+    <span id="page-info"></span>
+    <button id="next-page" onclick="changePage(1)">Next</button>
+  </div>
+
+  <script>
+    const paintings = [
+      // Add objects for each painting
+      { src: '/images/child8.jpg', title: 'girl', medium: 'Acrylic', price: '$200', size: '18x24' },
+      { src: '/images/radha krishna 1.jpg', title: 'Radha Krishna', medium: 'Pen on Paper with the stippling method', price: ' ₹ 1,25,000 ', size: '22x30 inches' },
+      { src: '/images/radha krishna 2.jpg', title: 'Radha Krishna', medium: 'Pen on Paper with the stippling method', price: ' ₹ 1,25,000 ', size: '22x30 inches' },
+      { src: '/images/ghat 1.jpg', title: 'Children', medium: 'Oil', price: '$250', size: '20x30' },
+      { src: '/images/ghat 2.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      // Add more paintings...
+      { src: '/images/ghat 3.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 4.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 5.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 6.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 7.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/lady.jpg', title: 'lady', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ganesha1.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ganesha2.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger6.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger7.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger8.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird1.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird2.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird3.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird4.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird5.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird6.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird7.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird8.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird9.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird10.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird11.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/bird12.jpg', title: 'Bird', medium: 'Pen and Colour on Paper', price: ' ₹ 50,000 ', size: '13x17 inches' },
+      { src: '/images/flower2.jpg', title: 'Flower', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/flower4.jpg', title: 'Flower', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/flower3.jpg', title: 'Flower', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/flower5.jpg', title: 'Flower', medium: 'Watercolor', price: '$180', size: '16x20' },
+      
+    ];
+
+    const paintingsPerPage = 20;
+    let currentPage = 1;
+
+    function renderPaintings() {
+      const start = (currentPage - 1) * paintingsPerPage;
+      const end = start + paintingsPerPage;
+      const paintingsToShow = paintings.slice(start, end);
+
+      const container = document.getElementById('paintings-container');
+      container.innerHTML = ''; // Clear current paintings
+
+      paintingsToShow.forEach(painting => {
+        const card = `
+          <div class="card" style="width: 18rem;">
+            <img src="${painting.src}" class="card-img-top" alt="${painting.title}" style="width: 100%; height: 400px; object-fit: cover;">
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">${painting.title}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" >Medium: ${painting.medium}</li>
+              <li class="list-group-item">Price: ${painting.price}</li>
+              <li class="list-group-item">Size: ${painting.size}</li>
+            </ul>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+
+      updatePagination();
+    }
+
+    function updatePagination() {
+      const totalPages = Math.ceil(paintings.length / paintingsPerPage);
+      document.getElementById('page-info').innerText = `Page ${currentPage} of ${totalPages}`;
+
+      document.getElementById('prev-page').disabled = currentPage === 1;
+      document.getElementById('next-page').disabled = currentPage === totalPages;
+    }
+
+    function changePage(direction) {
+      currentPage += direction;
+      renderPaintings();
+    }
+
+    // Initial render
+    renderPaintings();
+  </script>
+  
+  
 
 
   <div class="footer" style="background-color: #333; padding: 30px 0; color: #f1f1f1; box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); position: relative; bottom: 0; width: 100%;">
@@ -153,6 +319,5 @@
       
     </footer>
   </div>
-
 </body>
 </html>

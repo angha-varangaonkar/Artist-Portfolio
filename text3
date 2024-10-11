@@ -59,31 +59,6 @@
       color: #007bff;
     }
 
-    .about {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      margin-top: 10px;
-    }
-
-    .content {
-      max-width: 600px;
-    }
-
-    .image img {
-      width: 300px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-left: 150px;
-    }
-
-    .footer {
-      
-    }
-
     /* RESPONSIVENESS */
     @media (max-width: 768px) {
       .list {
@@ -96,20 +71,6 @@
 
       .social a {
         font-size: 30px;
-      }
-
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .image img {
-        margin-left: 0;
-        width: 80%;
-      }
-
-      .footer p {
-        font-size: 14px;
       }
     }
 
@@ -137,14 +98,45 @@
         font-size: 30px;
       }
 
-      .content p {
-        font-size: 14px;
-      }
-
       .footer p {
         font-size: 12px;
       }
     }
+
+
+
+    /* new css */
+    .card {
+      width: 18rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .pagination button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .pagination button:disabled {
+      background-color: #dcdcdc;
+      cursor: not-allowed;
+    }
+
   </style>
 </head>
 <body>
@@ -165,21 +157,102 @@
     </div>
   </div>
 
-  <div class="about">
-    <div class="content">
-      <h4>About Myself</h4>
-      <p>
-        Hi, I’m Milind Varangaonkar, a realistic artist from Udaipur, Rajasthan. My passion for art started at the JJ School of Art in Mumbai, where I learned to appreciate the beauty in the human form and nature’s landscapes.
-        <br><br>
-        After my studies, I worked as an illustrator at Creator Advertising, but I realized I wanted to express myself in a more personal way. That’s when I turned to realistic art, which truly speaks to me.
-        <br><br>
-        In my paintings, I try to capture the true essence of whatever I’m working on—whether it’s the details of a face or the majesty of a natural scene.
-      </p>
-    </div>
-    <div class="image">
-      <img src="/images/milind photo.jpg" alt="Milind Varangaonkar">
-    </div>
+
+  <div class="paintings" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px;" id="paintings-container">
+    <!-- Repeat your painting cards here -->
   </div>
+
+  <!-- Pagination controls -->
+  <div class="pagination">
+    <button id="prev-page" onclick="changePage(-1)" disabled>Previous</button>
+    <span id="page-info"></span>
+    <button id="next-page" onclick="changePage(1)">Next</button>
+  </div>
+
+  <script>
+    const paintings = [
+      // Add objects for each painting
+      { src: '/images/radha krishna 2.jpg', title: 'Radha Krishna', medium: 'Acrylic', price: '$200', size: '18x24' },
+      { src: '/images/ghat 1.jpg', title: 'Children', medium: 'Oil', price: '$250', size: '20x30' },
+      { src: '/images/ghat 2.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      // Add more paintings...
+      { src: '/images/ghat 3.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 4.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 5.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 6.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/ghat 7.jpg', title: 'Children', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tripolia.jpg', title: 'Tripolia', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger1.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger2.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger3.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger4.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger5.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger6.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger7.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/tiger8.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird1.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird2.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird3.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird4.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird5.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird6.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird7.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird8.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird9.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird10.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' },
+      { src: '/images/bird11.jpg', title: 'Tiger', medium: 'Watercolor', price: '$180', size: '16x20' }
+    ];
+
+    const paintingsPerPage = 20;
+    let currentPage = 1;
+
+    function renderPaintings() {
+      const start = (currentPage - 1) * paintingsPerPage;
+      const end = start + paintingsPerPage;
+      const paintingsToShow = paintings.slice(start, end);
+
+      const container = document.getElementById('paintings-container');
+      container.innerHTML = ''; // Clear current paintings
+
+      paintingsToShow.forEach(painting => {
+        const card = `
+          <div class="card" style="width: 18rem;">
+            <img src="${painting.src}" class="card-img-top" alt="${painting.title}" style="width: 100%; height: 400px; object-fit: cover;">
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">${painting.title}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Medium: ${painting.medium}</li>
+              <li class="list-group-item">Price: ${painting.price}</li>
+              <li class="list-group-item">Size: ${painting.size}</li>
+            </ul>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+
+      updatePagination();
+    }
+
+    function updatePagination() {
+      const totalPages = Math.ceil(paintings.length / paintingsPerPage);
+      document.getElementById('page-info').innerText = `Page ${currentPage} of ${totalPages}`;
+
+      document.getElementById('prev-page').disabled = currentPage === 1;
+      document.getElementById('next-page').disabled = currentPage === totalPages;
+    }
+
+    function changePage(direction) {
+      currentPage += direction;
+      renderPaintings();
+    }
+
+    // Initial render
+    renderPaintings();
+  </script>
+
+
+
 
   <div class="footer" style="background-color: #333; padding: 30px 0; color: #f1f1f1; box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); position: relative; bottom: 0; width: 100%;">
     <footer class="footer">

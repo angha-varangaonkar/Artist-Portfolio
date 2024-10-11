@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milind Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #333;
+    }
+
+    .list {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .list li a {
+      text-decoration: none;
+      font-size: 24px;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .list li a:hover {
+      color: #007bff;
+    }
+
+    .social a {
+      font-size: 40px;
+      color: #333;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #007bff;
+    }
+
+    /* RESPONSIVENESS */
+    @media (max-width: 768px) {
+      .list {
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .social a {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .social {
+        margin-top: 15px;
+      }
+
+      .social a {
+        font-size: 30px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .footer p {
+        font-size: 12px;
+      }
+    }
+
+    .card {
+      width: 18rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .pagination button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .pagination button:hover {
+      background-color: #0056b3;
+    }
+
+    .pagination button.disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Milind Varangaonkar</h1>
+    <ul class="list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./painting.html">Available Paintings</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    <div class="social">
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-facebook-square'></i></a>
+      <a href="#"><i class='bx bxl-gmail'></i></a>
+    </div>
+  </div>
+
+  <div id="paintings-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px;">
+    <!-- Paintings will be dynamically inserted here -->
+  </div>
+
+  <div class="pagination">
+    <button id="prev-btn" onclick="prevPage()">Previous</button>
+    <button id="next-btn" onclick="nextPage()">Next</button>
+  </div>
+
+  <script>
+    const paintings = [
+      { title: "Radha Krishna", medium: "Acrylic", price: "$200", size: "18x24 inches", image: "/images/radha krishna 2.jpg" },
+      { title: "Children 1", medium: "Oil", price: "$250", size: "20x30 inches", image: "/images/ghat 1.jpg" },
+      { title: "Children 2", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/ghat 2.jpg" },
+      { title: "Children 3", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/ghat 3.jpg" },
+      { title: "Children 4", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/ghat 4.jpg" },
+      { title: "Children 5", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/ghat 5.jpg" },
+      { title: "Children 6", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/ghat 6.jpg" },
+      { title: "Children 7", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/ghat 7.jpg" },
+      { title: "Tripolia", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/tripolia.jpg" },
+      { title: "Tiger 1", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/tiger1.jpg" },
+      { title: "Tiger 2", medium: "Watercolor", price: "$180", size: "16x20 inches", image: "/images/tiger2.jpg" },
+      // Add more paintings as necessary
+    ];
+
+    let currentPage = 1;
+    const itemsPerPage = 20;
+
+    function renderPaintings() {
+      const container = document.getElementById('paintings-container');
+      container.innerHTML = '';
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const paintingsToShow = paintings.slice(start, end);
+
+      paintingsToShow.forEach(painting => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+          <img src="${painting.image}" class="card-img-top" alt="${painting.title}" style="width: 100%; height: 250px; object-fit: cover;">
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="font-size: 1.5rem; margin-bottom: 10px; color: #333;">${painting.title}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Medium: ${painting.medium}</li>
+            <li class="list-group-item">Price: ${painting.price}</li>
+            <li class="list-group-item">Size: ${painting.size}</li>
+          </ul>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function updateButtons() {
+      document.getElementById('prev-btn').disabled = currentPage === 1;
+      document.getElementById('next-btn').disabled = currentPage * itemsPerPage >= paintings.length;
+    }
+
+    function nextPage() {
+      currentPage++;
+      renderPaintings();
+      updateButtons();
+    }
+
+    function prevPage() {
+      currentPage--;
+      renderPaintings();
+      updateButtons();
+    }
+
+    // Initial render
+    renderPaintings();
+    updateButtons();
+  </script>
+
+</body>
+</html>
